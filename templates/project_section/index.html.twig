@@ -1,0 +1,80 @@
+
+{% block body %}
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+<!-- CSS
+============================================ -->
+<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/vendor/slick.css">
+<link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+<link rel="stylesheet" href="assets/css/plugins/sal.css">
+<link rel="stylesheet" href="assets/css/plugins/feather.css">
+<link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/plugins/euclid-circulara.css">
+<link rel="stylesheet" href="assets/css/plugins/swiper.css">
+<link rel="stylesheet" href="assets/css/plugins/magnify.css">
+<link rel="stylesheet" href="assets/css/plugins/odometer.css">
+<link rel="stylesheet" href="assets/css/plugins/animation.css">
+<link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css">
+<link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
+<link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css">
+<link rel="stylesheet" href="assets/css/plugins/plyr.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Start Projects Area -->
+    <div class="rbt-course-area bg-color-white rbt-section-gap" id="project">
+        {% for p in projects %}
+        <div class="container">
+            <div class="row mb--60">
+                <div class="col-lg-12">
+                    <div class="section-title text-center">
+                        <h2 class="title"><span class="theme-gradient">{{p.title1}}</span> {{p.title2}}</h2>
+                        <p class="description has-medium-font-size mt--20"> {{p.description}}</p>
+                            <div class="button-group has-medium-font-size mt--20">
+                                <a class="rbt-btn btn-gradient rbt-marquee-btn" href="{{path('app_projects')}}">
+                                    <span data-text="See All Projects">See All Projects</span>
+                                </a>
+                            </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+    <!-- End Projects Area -->
+
+<!-- JS
+    ============================================ -->
+        <!-- Modernizer JS -->
+        <script src="assets/js/vendor/modernizr.min.js"></script>
+        <!-- jQuery JS -->
+        <script src="assets/js/vendor/jquery.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <!-- sal.js -->
+        <script src="assets/js/vendor/sal.js"></script>
+        <script src="assets/js/vendor/swiper.js"></script>
+        <script src="assets/js/vendor/magnify.min.js"></script>
+        <script src="assets/js/vendor/jquery-appear.js"></script>
+        <script src="assets/js/vendor/odometer.js"></script>
+        <script src="assets/js/vendor/backtotop.js"></script>
+        <script src="assets/js/vendor/isotop.js"></script>
+        <script src="assets/js/vendor/imageloaded.js"></script>
+    
+        <script src="assets/js/vendor/wow.js"></script>
+        <script src="assets/js/vendor/waypoint.min.js"></script>
+        <script src="assets/js/vendor/easypie.js"></script>
+        <script src="assets/js/vendor/text-type.js"></script>
+        <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+        <script src="assets/js/vendor/bootstrap-select.min.js"></script>
+        <script src="assets/js/vendor/jquery-ui.js"></script>
+        <script src="assets/js/vendor/magnify-popup.min.js"></script>
+        <script src="assets/js/vendor/paralax-scroll.js"></script>
+        <script src="assets/js/vendor/paralax.min.js"></script>
+        <script src="assets/js/vendor/countdown.js"></script>
+        <script src="assets/js/vendor/plyr.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+{% endblock %}

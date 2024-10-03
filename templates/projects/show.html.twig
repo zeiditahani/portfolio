@@ -1,0 +1,54 @@
+{# templates/projects/show.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Details</title>
+</head>
+<body>
+    <h1>Project Details</h1>
+
+    {# Dumper les données du projet pour le débogage #}
+    {#{ dump(Projects) }#}
+
+    {# Afficher les détails du projet s'il existe #}
+    {% if Projects %}
+        <h2>{{ Projects.title }}</h2>
+        <div>{{ Projects.description|raw }}</div>
+
+          
+        {# Afficher le type de projet s'il existe #}
+        {% if Projects.projectstype %}
+        <p>Project Type: {{ Projects.projectstype.title }}</p>
+    {% else %}
+        <p>No project type available.</p>
+    {% endif %}
+
+    {# Afficher les langages du projet s'ils existent #}
+    {% if Projects.langage|length > 0 %}
+        <p>Project Langages:</p>
+        <ul>
+            {% for langage in Projects.langage %}
+                <li>{{ langage.title }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No project langages available.</p>
+    {% endif %}
+
+        {% if Projects.image %}
+            <img src="{{ asset('uploads/'~Projects.image) }}" alt="{{ Projects.altimage }}">
+        {% else %}
+            <p>No project image available.</p>
+        {% endif %}
+
+        {% if Projects.link %}
+        <p><a href="{{ Projects.link }}">Project Link</a></p>
+    {% else %}
+        <p>No project link available.</p>
+    {% endif %}
+    {% else %}
+        <p>No project found.</p>
+    {% endif %}
+</body>
+</html>

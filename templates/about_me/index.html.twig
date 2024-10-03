@@ -1,0 +1,98 @@
+
+{% block body %}
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+<!-- CSS
+============================================ -->
+<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/vendor/slick.css">
+<link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+<link rel="stylesheet" href="assets/css/plugins/sal.css">
+<link rel="stylesheet" href="assets/css/plugins/feather.css">
+<link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css">
+<link rel="stylesheet" href="assets/css/plugins/euclid-circulara.css">
+<link rel="stylesheet" href="assets/css/plugins/swiper.css">
+<link rel="stylesheet" href="assets/css/plugins/magnify.css">
+<link rel="stylesheet" href="assets/css/plugins/odometer.css">
+<link rel="stylesheet" href="assets/css/plugins/animation.css">
+<link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css">
+<link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
+<link rel="stylesheet" href="assets/css/plugins/magnigy-popup.min.css">
+<link rel="stylesheet" href="assets/css/plugins/plyr.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Start AboutMe Area  -->
+<div class="about-style-2 rbt-section-gapBottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                {% for a in aboutMe %}
+                <div class="row row--0 about-wrapper align-items-center theme-shape">
+                    <div class="col-lg-6">
+                        <div class="thumbnail">
+                            <img src="assets/images/about/about-12.jpg" alt="About Images">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt_md--30 mt_sm--30">
+                        <div class="content">
+                            <div class="inner">
+                                <h4 class="title">I'm <span class="theme-gradient">Tahani Zeidi</span> <br />{{a.title1}}</h4>
+                                <p>{{a.title1}}</p>
+                                <ul class="contact-address">
+                                    <li>
+                                        <i class="feather-file"></i> {{a.title2}}
+                                    </li>
+                                    <li><i class="feather-phone"></i> {{a.phone}}</li>
+                                    <li>
+                                        <i class="feather-map-pin"></i> {{a.local}}
+                                    </li>
+                                </ul>
+                                <div class="signature-image mt--20">
+                                    <img src="{{ asset('uploads/'~a.signature)}}" alt="Signature Images">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-circle-shape position-bottom-right"></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End AboutMe Area  -->
+
+<!-- JS
+    ============================================ -->
+        <!-- Modernizer JS -->
+        <script src="assets/js/vendor/modernizr.min.js"></script>
+        <!-- jQuery JS -->
+        <script src="assets/js/vendor/jquery.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <!-- sal.js -->
+        <script src="assets/js/vendor/sal.js"></script>
+        <script src="assets/js/vendor/swiper.js"></script>
+        <script src="assets/js/vendor/magnify.min.js"></script>
+        <script src="assets/js/vendor/jquery-appear.js"></script>
+        <script src="assets/js/vendor/odometer.js"></script>
+        <script src="assets/js/vendor/backtotop.js"></script>
+        <script src="assets/js/vendor/isotop.js"></script>
+        <script src="assets/js/vendor/imageloaded.js"></script>
+    
+        <script src="assets/js/vendor/wow.js"></script>
+        <script src="assets/js/vendor/waypoint.min.js"></script>
+        <script src="assets/js/vendor/easypie.js"></script>
+        <script src="assets/js/vendor/text-type.js"></script>
+        <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+        <script src="assets/js/vendor/bootstrap-select.min.js"></script>
+        <script src="assets/js/vendor/jquery-ui.js"></script>
+        <script src="assets/js/vendor/magnify-popup.min.js"></script>
+        <script src="assets/js/vendor/paralax-scroll.js"></script>
+        <script src="assets/js/vendor/paralax.min.js"></script>
+        <script src="assets/js/vendor/countdown.js"></script>
+        <script src="assets/js/vendor/plyr.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+{% endblock %}
